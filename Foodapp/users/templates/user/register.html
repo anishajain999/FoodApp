@@ -1,0 +1,37 @@
+{% extends 'food/base.html' %}
+
+{% block title %}Register{% endblock title %}
+
+{% block body %}
+
+
+ <div class="container my-5 ">
+        <div class="row">
+            <div class="col-md-4 offset-4">
+                <div class="card">
+                    <div class="card-header bg-dark text-light">
+                        <div class="card-title text-center"> <h2><strong> Register </strong> </h2> </div> 
+                    </div> 
+                    <div class="card-body">
+                        <form method="POST" class="my-4 mx-2">
+                            {% csrf_token %}
+                            {% for field in form %}
+                                <div class="form-group my-4">
+                                    <b>{{field.name}}:</b>
+                                    <br>
+                                    {{field}}
+                                </div>
+                            {% endfor %}
+                            <div class="container mx-5">
+                                <button type="submit" class="btn btn-dark "><b>Signup</b>>/button>
+                            </div>
+                        </form>
+                    </div> 
+                </div> 
+            </div> 
+        </div>       
+
+    </div>
+    
+
+{% endblock body %}

@@ -1,0 +1,12 @@
+{% extends 'food/base.html' %}
+
+{% block title %}Profile{% endblock title %}
+
+{% block body %}
+
+    <div class="container text-center my-4">
+        <h1> {{user.username}} </h1>
+        <img src="{{user.profile.img.url}}">
+    </div>
+
+{% endblock body %}
